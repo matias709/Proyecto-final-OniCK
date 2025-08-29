@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhfdjqk20lncr"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ref6h"]
+
+[node name="terrain_noise" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("NoiseTexture2D_ref6h")
