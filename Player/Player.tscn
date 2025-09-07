@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ddyclhs3ch43h"]
 
-[ext_resource type="Texture2D" path="res://Characters/Sprites/Player.png" id="1_3qydi"]
 [ext_resource type="Script" uid="uid://8bkbr13ya4q6" path="res://Characters/_Scripts/Player.gd" id="1_q3lat"]
+[ext_resource type="Texture2D" uid="uid://2rilxau6voq1" path="res://Characters/Sprites/player_boceto_1-Sheet.png" id="2_q3lat"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q3lat"]
 radius = 7.0
@@ -12,7 +12,7 @@ script = ExtResource("1_q3lat")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_3qydi")
+texture = ExtResource("2_q3lat")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_q3lat")

@@ -6,7 +6,7 @@ var altitude = FastNoiseLite.new()
 
 var width = 350
 var height = 350
-var biomas = [Vector2i(0,6), Vector2i(1,1),Vector2i(1,4),Vector2i(24,1)]
+var biomas = [Vector2i(2,0), Vector2i(0,0), Vector2i(1,0)]
 var target_tail:Array[Vector2i]
 
 var loaded_chunks = []
@@ -30,9 +30,8 @@ func generate_chunk(pos):
 			var temp = temperature.get_noise_2d(pos.x - (width / 2) + x, pos.y - (height / 2) + y) * 10
 			var alt = altitude.get_noise_2d(pos.x - (width / 2) + x, pos.y - (height / 2) + y) * 10
 			
-			
 			if alt < 0:
 				set_cell(Vector2i(pos.x - (width / 2) + x, pos.y - (height / 2) + y), 0, biomas[0])
 			else:
-				set_cell(Vector2i(pos.x - (width / 2) + x, pos.y - (height / 2) + y), 0, biomas[randf_range(1,3)])
+				set_cell(Vector2i(pos.x - (width / 2) + x, pos.y - (height / 2) + y), 0, biomas[1])
 			
