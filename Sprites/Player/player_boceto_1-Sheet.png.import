@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2rilxau6voq1"
-path="res://.godot/imported/player_boceto_1-Sheet.png-16b91d699b37a56ddffda39c430f68a1.ctex"
+uid="uid://cmb08boyjsslh"
+path="res://.godot/imported/player_boceto_1-Sheet.png-8df57ee06b816284b1dd4e6c721f7c5f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Sprites/player_boceto_1-Sheet.png"
-dest_files=["res://.godot/imported/player_boceto_1-Sheet.png-16b91d699b37a56ddffda39c430f68a1.ctex"]
+source_file="res://Sprites/Player/player_boceto_1-Sheet.png"
+dest_files=["res://.godot/imported/player_boceto_1-Sheet.png-8df57ee06b816284b1dd4e6c721f7c5f.ctex"]
 
 [params]
 
