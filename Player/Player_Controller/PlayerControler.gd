@@ -1,10 +1,14 @@
 class_name PlayerController extends CharacterBody2D
 
 # variables de movimiento
-@export var speed: float = 300.0
+@export var speed: float = 150.0
 @export var friction: float = 1000.0
 @export var accel: float = 1500.0
 @export var decel: float = 2200.0
+@export var dash_distance: float = 500.0
+@export var can_dash: bool = true
+@export var dashing: bool = false
+
 
 #variables de sprite
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ddyclhs3ch43h"]
+[gd_scene load_steps=9 format=3 uid="uid://ddyclhs3ch43h"]
 
 [ext_resource type="Script" uid="uid://cyt3ta0rybx1a" path="res://Player/Player_Controller/PlayerControler.gd" id="1_8g4oa"]
 [ext_resource type="SpriteFrames" uid="uid://dv02nyt0ym2i3" path="res://Player/Animation/Player.tres" id="2_q3lat"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://dcjrt1xymvr81" path="res://Player/Player_Controller/walk.gd" id="4_8g4oa"]
 [ext_resource type="Script" uid="uid://bwul520gt6t6u" path="res://Player/Player_Controller/State.gd" id="4_ddoul"]
 [ext_resource type="Script" uid="uid://d2kwatsoajltf" path="res://Player/Player_Controller/idle.gd" id="6_6ysni"]
+[ext_resource type="Script" uid="uid://0e1oq3qsqgxu" path="res://Player/Player_Controller/dash.gd" id="7_vlldt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q3lat"]
 radius = 7.0
@@ -37,4 +38,16 @@ metadata/_custom_type_script = "uid://bwul520gt6t6u"
 
 [node name="Idle" type="Node" parent="StateMachine/States"]
 script = ExtResource("6_6ysni")
+metadata/_custom_type_script = "uid://bwul520gt6t6u"
+
+[node name="Dash" type="Node" parent="StateMachine/States"]
+script = ExtResource("7_vlldt")
+metadata/_custom_type_script = "uid://bwul520gt6t6u"
+
+[node name="Attack_mele" type="Node" parent="StateMachine/States"]
+script = ExtResource("4_ddoul")
+metadata/_custom_type_script = "uid://bwul520gt6t6u"
+
+[node name="Attack_range" type="Node" parent="StateMachine/States"]
+script = ExtResource("4_ddoul")
 metadata/_custom_type_script = "uid://bwul520gt6t6u"
