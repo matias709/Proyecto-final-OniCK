@@ -12,7 +12,7 @@ func enter(msg := {}) -> void:
 	animatied_sprite.play("Idle")
 
 func update(delta: float) -> void:
-	print ("ESTADO: Idle")
+	#print ("ESTADO: Idle")
 	var axis := Input.get_action_strength("move_right") - Input.get_action_strength("move_left") - Input.get_action_strength("move_up") - Input.get_action_strength("move_down")
 
 	if axis != 0.0:
@@ -20,3 +20,4 @@ func update(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("ui_accept"):
 		request(&"Dash")
+ 

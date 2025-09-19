@@ -13,10 +13,11 @@ func enter(msg: Dictionary = {}) ->void:
 		if dir == Vector2.ZERO:
 			dir = Vector2.DOWN
 		actor.velocity = dir * actor.dash_distance
-		actor.can_dash = true
-		actor.dashing = false
-	if not actor.dashing:
 		request(&"Walk")
+		#actor.can_dash = true
+		#actor.dashing = false
+	#if not actor.dashing:
+		#request(&"Walk")
 
 func exit() -> void:
 	actor.can_dash = true

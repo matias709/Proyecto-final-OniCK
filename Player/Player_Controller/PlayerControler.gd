@@ -9,7 +9,6 @@ class_name PlayerController extends CharacterBody2D
 @export var can_dash: bool = true
 @export var dashing: bool = false
 
-
 #variables de sprite
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var sm: StateMachine = $StateMachine

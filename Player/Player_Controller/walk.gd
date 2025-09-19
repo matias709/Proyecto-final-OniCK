@@ -6,7 +6,7 @@ func allowed_transitions() -> Array[StringName]:
 	return [&"Idle",&"Dash"]
 
 func update(delta: float) -> void:
-	print ("ESTADO: Walk")
+	#print ("ESTADO: Walk")
 	var input_vector = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 
 	if input_vector != Vector2.ZERO:

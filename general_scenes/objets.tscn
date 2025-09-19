@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://brsx6tvkny7xe"]
+
+[ext_resource type="Script" uid="uid://c3s2jdxawld38" path="res://_Scripts/Objets.gd" id="1_sts4w"]
+
+[node name="Objets" type="Node"]
+script = ExtResource("1_sts4w")
+metadata/_custom_type_script = "uid://c3s2jdxawld38"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0

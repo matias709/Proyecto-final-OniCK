@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://h8d0rvnj7mqh"]
+
+[ext_resource type="SpriteFrames" path="C:/Users/mmang/OneDrive/Desktop/UCES/20-Viernes-Diseño-Desarrollo-Juegos-2/Proyecto-final-OniCK/Sprites/Enemy/slime_1-Sheet.png" id="1_wkvy3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ydpbq"]
+height = 20.0
+
+[node name="Enemy" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CapsuleShape2D_ydpbq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_wkvy3")
+animation = &"Idle"

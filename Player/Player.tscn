@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ddyclhs3ch43h"]
+[gd_scene load_steps=11 format=3 uid="uid://ddyclhs3ch43h"]
 
 [ext_resource type="Script" uid="uid://cyt3ta0rybx1a" path="res://Player/Player_Controller/PlayerControler.gd" id="1_8g4oa"]
 [ext_resource type="SpriteFrames" uid="uid://dv02nyt0ym2i3" path="res://Player/Animation/Player.tres" id="2_q3lat"]
@@ -7,10 +7,17 @@
 [ext_resource type="Script" uid="uid://bwul520gt6t6u" path="res://Player/Player_Controller/State.gd" id="4_ddoul"]
 [ext_resource type="Script" uid="uid://d2kwatsoajltf" path="res://Player/Player_Controller/idle.gd" id="6_6ysni"]
 [ext_resource type="Script" uid="uid://0e1oq3qsqgxu" path="res://Player/Player_Controller/dash.gd" id="7_vlldt"]
+[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="8_s1rgi"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q3lat"]
 radius = 7.0
 height = 20.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_s1rgi"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1, 5, 1)
+gravity = Vector3(-70, 0, 0)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_8g4oa")
@@ -51,3 +58,15 @@ metadata/_custom_type_script = "uid://bwul520gt6t6u"
 [node name="Attack_range" type="Node" parent="StateMachine/States"]
 script = ExtResource("4_ddoul")
 metadata/_custom_type_script = "uid://bwul520gt6t6u"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="PhantomCameraHost" type="Node" parent="Camera2D"]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("8_s1rgi")
+metadata/_custom_type_script = "uid://bd046eokvcnu2"
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_s1rgi")
