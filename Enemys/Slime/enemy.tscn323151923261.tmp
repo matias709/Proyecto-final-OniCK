@@ -1,16 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://h8d0rvnj7mqh"]
+[gd_scene load_steps=7 format=3 uid="uid://h8d0rvnj7mqh"]
 
 [ext_resource type="SpriteFrames" uid="uid://ttk7ixsb3muo" path="res://Enemys/Slime/slime_animations.tres" id="1_5qflx"]
 [ext_resource type="Script" uid="uid://t7t3f0va13x4" path="res://Player/Player_Controller/StateMachine.gd" id="1_aym0a"]
-[ext_resource type="Script" uid="uid://dhkr5qhn7nfiu" path="res://Enemys/Slime/slime_Controller.gd" id="1_kwdhi"]
 [ext_resource type="Script" uid="uid://bwul520gt6t6u" path="res://Player/Player_Controller/State.gd" id="2_edd6n"]
 [ext_resource type="Script" uid="uid://gqcmna7ouwvw" path="res://Enemys/Slime/Idle_Enemy.gd" id="3_edd6n"]
 [ext_resource type="Script" uid="uid://bfhcb76y3fgkv" path="res://Enemys/Slime/Walk_Slime.gd" id="5_5qflx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kwdhi"]
 
-[node name="Slime" type="CharacterBody2D"]
-script = ExtResource("1_kwdhi")
+[node name="CharacterBody2D" type="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_kwdhi")

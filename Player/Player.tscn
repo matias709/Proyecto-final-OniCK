@@ -28,8 +28,7 @@ shape = SubResource("CapsuleShape2D_q3lat")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("2_q3lat")
-animation = &"walk_right"
-frame_progress = 0.452905
+animation = &"Idle"
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("3_tok1r")
