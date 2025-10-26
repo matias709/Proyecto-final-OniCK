@@ -11,8 +11,7 @@ func enter(msg := {}) -> void:
 
 func update(delta: float) -> void:
 	#print ("ESTADO: Idle")
-	var axis = randi_range(1,50)
-	if axis == 25:
-		request(&"Walk")
-
- 
+	#var axis = randi_range(1,50)
+	#print(axis)
+	#if axis == 25:
+	request(&"Walk")

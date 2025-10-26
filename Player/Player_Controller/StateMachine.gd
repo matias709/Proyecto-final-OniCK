@@ -39,7 +39,7 @@ extends Node
 
 @onready var actor := get_parent() as CharacterBody2D  ## PlayerController (padre). El State lo manipula.
 @onready var animation := get_parent() as AnimatedSprite2D  ## PlayerController (padre). El State lo manipula.
-@onready var _states_root := $States                   ## Carpeta de hijos-estado por convención.
+@onready var _states_root := $State                   ## Carpeta de hijos-estado por convención.
 var _policy_ref: Node = null
 var _anim_ref: Node = null
 
