@@ -10,8 +10,8 @@ func enter(msg := {}) -> void:
 	animatied_sprite.play("Idle")
 
 func update(delta: float) -> void:
-	#print ("ESTADO: Idle")
-	#var axis = randi_range(1,50)
-	#print(axis)
-	#if axis == 25:
+	actor.velocity = Vector2.ZERO
+
+
+func _on_timer_timeout() -> void:
 	request(&"Walk")

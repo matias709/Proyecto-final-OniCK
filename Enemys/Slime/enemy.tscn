@@ -12,6 +12,10 @@
 [node name="Slime" type="CharacterBody2D"]
 script = ExtResource("1_kwdhi")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_kwdhi")
 
@@ -34,3 +38,5 @@ metadata/_custom_type_script = "uid://bwul520gt6t6u"
 [node name="Walk" type="Node" parent="StateMachine/State"]
 script = ExtResource("5_5qflx")
 metadata/_custom_type_script = "uid://bwul520gt6t6u"
+
+[connection signal="timeout" from="Timer" to="StateMachine/State/Idle" method="_on_timer_timeout"]
